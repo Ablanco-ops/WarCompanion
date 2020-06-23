@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground"
+        tools:context=".gameConfig.PreGameFragment">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/players_cw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/colorCardBackground"
+            app:cardCornerRadius="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/player_name"
+                    android:layout_width="150dp"
+                    android:layout_height="48dp"
+                    android:gravity="center"
+                    android:text="@string/your_name"
+                    android:textAlignment="center"
+                    android:textAppearance="?textAppearanceHeadline6"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Spinner
+                    android:id="@+id/ply_faction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintEnd_toEndOf="@+id/player_name"
+                    app:layout_constraintStart_toStartOf="@id/player_name"
+                    app:layout_constraintTop_toBottomOf="@id/player_name" />
+
+                <Spinner
+                    android:id="@+id/ply_subfaction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="@+id/player_name"
+                    app:layout_constraintStart_toStartOf="@id/player_name"
+                    app:layout_constraintTop_toBottomOf="@id/ply_faction" />
+
+
+                <EditText
+                    android:id="@+id/opp_name"
+                    android:layout_width="150dp"
+                    android:layout_height="48dp"
+                    android:autofillHints="@string/opponent_hint"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="@string/opponent_hint"
+                    android:inputType="textPersonName"
+                    android:text="@string/opponent_text"
+                    android:textAlignment="center"
+                    android:textAppearance="?textAppearanceHeadline6"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Spinner
+                    android:id="@+id/opp_faction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:gravity="center"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="@+id/opp_name"
+                    app:layout_constraintStart_toStartOf="@+id/opp_name"
+                    app:layout_constraintTop_toBottomOf="@id/opp_name" />
+
+                <Spinner
+                    android:id="@+id/opp_subfaction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="@+id/opp_name"
+                    app:layout_constraintStart_toStartOf="@id/opp_name"
+                    app:layout_constraintTop_toBottomOf="@id/opp_faction" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/score_cw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/players_cw">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

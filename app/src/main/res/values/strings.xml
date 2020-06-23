@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">War Companion</string>
+    <string name="button_new_game">New Game</string>
+    <string name="button_continue_game">Continue Game</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="opponent_text">"Opponent "</string>
+    <string name="your_name">You</string>
+    <string name="opponent_hint">Opponent name</string>
+
+
+</resources>

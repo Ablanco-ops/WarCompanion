@@ -3,4 +3,7 @@
     <string name="app_name">War Companion</string>
     <string name="button_new_game">New Game</string>
     <string name="button_continue_game">Continue Game</string>
+    <string name="opponent_text">Oponente</string>
+    <string name="your_name">Tú</string>
+    <string name="opponent_hint">Oponente</string>
 </resources>

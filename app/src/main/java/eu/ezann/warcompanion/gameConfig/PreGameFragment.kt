@@ -35,6 +35,8 @@ class PreGameFragment : Fragment() {
 
 
 
+
+
         binding.plyFaction.onItemSelectedListener = object : OnItemSelectedListener{
             override fun onNothingSelected(parent: AdapterView<*>?) {
 
@@ -54,6 +56,21 @@ class PreGameFragment : Fragment() {
 
             override fun onItemSelected(parent: AdapterView<*>?, view: View?,
                 position: Int, id: Long
+            ) {
+
+            }
+        }
+
+        binding.primaryMission.onItemSelectedListener = object : OnItemSelectedListener{
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+
+            }
+
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
             ) {
 
             }

@@ -9,12 +9,16 @@ import android.widget.AdapterView
 import android.widget.AdapterView.*
 import android.widget.ArrayAdapter
 import androidx.databinding.DataBindingUtil
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import eu.ezann.warcompanion.R
 import eu.ezann.warcompanion.databinding.FragmentPreGameBinding
+import eu.ezann.warcompanion.gameConfig.mission.Mission
+import eu.ezann.warcompanion.gameConfig.mission.MissionRecyclerAdapter
+import kotlinx.android.synthetic.main.fragment_mission.*
 
 
 class PreGameFragment : Fragment() {
@@ -59,6 +63,8 @@ class PreGameFragment : Fragment() {
             }
         }.attach()
     }
+
+
 
 
 }

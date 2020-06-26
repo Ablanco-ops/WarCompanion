@@ -8,6 +8,10 @@
     <string name="your_name">You</string>
     <string name="opponent_hint">Opponent name</string>
 
+    <string name="pre_game_tab_armies">Armies</string>
+    <string name="pre_game_tab_primaries">Mission</string>
+    <string name="pre_game_tab_secondaries">Secondaries</string>
+
 
     <string-array name="mission_list">
         <item>1.</item>
@@ -17,6 +21,10 @@
         <item>5.</item>
         <item>6.</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="armies_command_points">Command Points</string>
+    <string name="armies_faction_textfaction">Faction</string>
 
 
 </resources>

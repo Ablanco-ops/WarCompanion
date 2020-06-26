@@ -9,11 +9,18 @@ import android.widget.AdapterView
 import android.widget.AdapterView.*
 import android.widget.ArrayAdapter
 import androidx.databinding.DataBindingUtil
+import androidx.viewpager.widget.ViewPager
+import androidx.viewpager2.widget.ViewPager2
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 import eu.ezann.warcompanion.R
 import eu.ezann.warcompanion.databinding.FragmentPreGameBinding
 
 
 class PreGameFragment : Fragment() {
+
+    private lateinit var tabAdapter: PreGameTabAdapter
+    private lateinit var viewPager: ViewPager2
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,57 +34,30 @@ class PreGameFragment : Fragment() {
 
 
 
-        val adapterP1Fact = ArrayAdapter<String>(requireContext(),R.layout.support_simple_spinner_dropdown_item,viewModel.factionList)
-            binding.plyFaction.adapter = adapterP1Fact
-
-        val adapterP2Fact = ArrayAdapter<String>(requireContext(),R.layout.support_simple_spinner_dropdown_item,viewModel.factionList)
-        binding.oppFaction.adapter = adapterP2Fact
-
-
-
-
-
-        binding.plyFaction.onItemSelectedListener = object : OnItemSelectedListener{
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-
-            override fun onItemSelected(parent: AdapterView<*>?, view: View?,
-                position: Int, id: Long
-            ) {
-
-            }
-        }
-
-        binding.oppFaction.onItemSelectedListener = object : OnItemSelectedListener{
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-
-            override fun onItemSelected(parent: AdapterView<*>?, view: View?,
-                position: Int, id: Long
-            ) {
-
-            }
-        }
-
-        binding.primaryMission.onItemSelectedListener = object : OnItemSelectedListener{
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?,
-                position: Int,
-                id: Long
-            ) {
-
-            }
-        }
 
 
         return binding.root
+
+
+    }
+
+
+
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        val tabLayout = view.findViewById<TabLayout>(R.id.game_config_tab)
+        tabAdapter = PreGameTabAdapter(this)
+        viewPager = view.findViewById(R.id.pager_pre_game)
+        viewPager.adapter = tabAdapter
+
+
+        TabLayoutMediator(tabLayout,viewPager) {tab, position ->
+            tab.text = when(position){
+                0-> getString(R.string.pre_game_tab_armies)
+                1-> getString(R.string.pre_game_tab_primaries)
+                else ->getString(R.string.pre_game_tab_secondaries)
+            }
+        }.attach()
     }
 
 

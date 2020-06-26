@@ -1,0 +1,192 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground"
+        tools:context=".gameConfig.PreGameFragment">
+
+
+        <TextView
+            android:id="@+id/player_name"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/your_name"
+            android:textAlignment="center"
+            android:textAppearance="?textAppearanceHeadline6"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintBaseline_toBaselineOf="@id/opp_name"
+            app:layout_constraintEnd_toStartOf="@+id/opp_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <EditText
+            android:id="@+id/opp_name"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:autofillHints="@string/opponent_hint"
+            android:ems="10"
+            android:hint="@string/opponent_hint"
+            android:inputType="textPersonName"
+            android:text="@string/opponent_text"
+            android:textAlignment="center"
+            android:textAppearance="?textAppearanceHeadline6"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/player_name"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/div_army_names"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            android:layout_margin="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/player_name" />
+
+        <TextView
+            android:id="@+id/faction_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:text="@string/armies_faction_textfaction"
+            android:textAlignment="center"
+            android:textAppearance="?textAppearanceHeadline6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/div_army_names">
+
+        </TextView>
+
+
+
+        <Spinner
+            android:id="@+id/ply_faction"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="8dp"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintEnd_toEndOf="@+id/player_name"
+            app:layout_constraintStart_toStartOf="@id/player_name"
+            app:layout_constraintTop_toBottomOf="@id/faction_text" />
+
+        <Spinner
+            android:id="@+id/opp_faction"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="@+id/opp_name"
+            app:layout_constraintStart_toStartOf="@+id/opp_name"
+            app:layout_constraintTop_toBottomOf="@id/faction_text" />
+
+        <View
+            android:id="@+id/div_army_faction"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            android:layout_margin="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ply_faction" />
+
+        <TextView
+            android:id="@+id/armies_cp_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/armies_command_points"
+            android:textAlignment="center"
+            android:textAppearance="?textAppearanceHeadline6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/div_army_faction">
+
+        </TextView>
+
+
+        <TextView
+            android:id="@+id/p1_cp"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:background="@color/colorWhite"
+            android:text="12"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@id/ply_faction"
+            app:layout_constraintStart_toStartOf="@id/ply_faction"
+            app:layout_constraintTop_toBottomOf="@+id/armies_cp_text">
+
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/p1_cp_plus"
+            style="@style/plus_minus_buttons"
+            android:src="@drawable/ic_baseline_arrow_right_24"
+            app:layout_constraintStart_toEndOf="@id/p1_cp"
+            app:layout_constraintTop_toTopOf="@id/p1_cp"
+            app:layout_constraintBottom_toBottomOf="@id/p1_cp">
+
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/p1_cp_minus"
+            style="@style/plus_minus_buttons"
+            android:src="@drawable/ic_baseline_arrow_left_24"
+            app:layout_constraintEnd_toStartOf="@id/p1_cp"
+            app:layout_constraintTop_toTopOf="@id/p1_cp"
+            app:layout_constraintBottom_toBottomOf="@id/p1_cp">
+
+        </ImageButton>
+
+        <TextView
+            android:id="@+id/p2_cp"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:background="@color/colorWhite"
+            android:text="12"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@id/opp_faction"
+            app:layout_constraintStart_toStartOf="@id/opp_faction"
+            app:layout_constraintTop_toBottomOf="@+id/armies_cp_text">
+
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/p2_cp_plus"
+            style="@style/plus_minus_buttons"
+            android:src="@drawable/ic_baseline_arrow_right_24"
+            app:layout_constraintStart_toEndOf="@id/p2_cp"
+            app:layout_constraintTop_toTopOf="@id/p2_cp"
+            app:layout_constraintBottom_toBottomOf="@id/p2_cp">
+
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/p2_cp_minus"
+            android:src="@drawable/ic_baseline_arrow_left_24"
+            app:layout_constraintEnd_toStartOf="@id/p2_cp"
+            app:layout_constraintTop_toTopOf="@id/p2_cp"
+            app:layout_constraintBottom_toBottomOf="@id/p2_cp"
+            style="@style/plus_minus_buttons">
+
+        </ImageButton>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </layout>

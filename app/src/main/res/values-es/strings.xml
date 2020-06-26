@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">War Companion</string>
-    <string name="button_new_game">New Game</string>
-    <string name="button_continue_game">Continue Game</string>
+    <string name="button_new_game">Nueva Partida</string>
+    <string name="button_continue_game">Continuar</string>
     <string name="opponent_text">Oponente</string>
     <string name="your_name">Tú</string>
     <string name="opponent_hint">Oponente</string>
+    <string name="pre_game_tab_armies">Ejércitos</string>
+    <string name="pre_game_tab_primaries">Misión</string>
+    <string name="pre_game_tab_secondaries">Secundarias</string>
 </resources>

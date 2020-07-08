@@ -1,4 +1,4 @@
-package eu.ezann.warcompanion.gameConfig.mission
+package eu.ezann.warcompanion.gameConfig.primarymission
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView

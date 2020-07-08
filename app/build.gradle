@@ -30,6 +30,14 @@ android {
         }
     }
 
+    compileOptions{
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
 }
 
 dependencies {
@@ -56,8 +64,10 @@ dependencies {
     implementation "androidx.room:room-runtime:$room_version"
     kapt "androidx.room:room-compiler:$room_version"
 
-    //Lifecycle
-    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    //Lifecycle, VM, LiveData
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
 
     //Coroutines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutine_version"

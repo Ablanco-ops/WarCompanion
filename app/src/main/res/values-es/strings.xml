@@ -9,4 +9,9 @@
     <string name="pre_game_tab_armies">Ejércitos</string>
     <string name="pre_game_tab_primaries">Misión</string>
     <string name="pre_game_tab_secondaries">Secundarias</string>
+    <string name="eternal_war_tag">Guerra Eterna</string>
+    <string name="size1_tag">Patrulla</string>
+    <string name="size2_tag">Fuerza de Combate</string>
+
+    <string name="armies_faction_textfaction">Facción</string>
 </resources>

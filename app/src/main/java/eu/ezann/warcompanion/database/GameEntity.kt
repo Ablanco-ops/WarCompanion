@@ -28,13 +28,13 @@ data class GameEntity(
     var p1T3PrimSc: Int= -1,
     var p1T4PrimSc: Int= -1,
     var p1T5PrimSc: Int= -1,
-    var p1T6PrimSc: Int= -1,
+
     var p2T1PrimSc: Int= -1,
     var p2T2PrimSc: Int= -1,
     var p2T3PrimSc: Int= -1,
     var p2T4PrimSc: Int= -1,
     var p2T5PrimSc: Int= -1,
-    var p2T6PrimSc: Int= -1,
+
     var p1Sec1Sc: Int= -1,
     var p1Sec2Sc: Int= -1,
     var p1Sec3Sc: Int= -1,

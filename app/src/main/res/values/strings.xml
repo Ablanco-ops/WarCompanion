@@ -12,15 +12,38 @@
     <string name="pre_game_tab_primaries">Mission</string>
     <string name="pre_game_tab_secondaries">Secondaries</string>
 
+    <string name="eternal_war_tag">Eternal War</string>
+    <string name="size1_tag">Patrol</string>
+    <string name="size2_tag">Incursion</string>
+    <string name="size3_tag">Strike Force</string>
+    <string name="size4_tag">Onslaught</string>
 
-    <string-array name="mission_list">
-        <item>1.</item>
-        <item>2.</item>
-        <item>3. The Four Pillars</item>
-        <item>4.</item>
-        <item>5.</item>
-        <item>6.</item>
-    </string-array>
+
+    <string name="eternal_war_s1_1">Incisive Attack</string>
+    <string name="eternal_war_s1_2">Outriders</string>
+    <string name="eternal_war_s1_3">Encircle</string>
+
+
+    <string name="eternal_war_s2_1">Divide and Conquer</string>
+    <string name="eternal_war_s2_2">Crossfire</string>
+    <string name="eternal_war_s2_3">Centre Ground</string>
+    <string name="eternal_war_s2_4">Forward Punch</string>
+    <string name="eternal_war_s2_5">Ransack</string>
+    <string name="eternal_war_s2_6">Shifting Front</string>
+
+    <string name="eternal_war_s3_1">Retrieval Mission</string>
+    <string name="eternal_war_s3_2">Front-line Warfare</string>
+    <string name="eternal_war_s3_3">The Four Pillars</string>
+    <string name="eternal_war_s3_4">No Man\'s Land</string>
+    <string name="eternal_war_s3_5">Scorched Earth</string>
+    <string name="eternal_war_s3_6">Vital Intelligence</string>
+
+
+    <string name="eternal_war_s4_1">Lines of Battle</string>
+    <string name="eternal_war_s4_2">All-out War</string>
+    <string name="eternal_war_s4_3">Pathway to Glory</string>
+
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="armies_command_points">Command Points</string>

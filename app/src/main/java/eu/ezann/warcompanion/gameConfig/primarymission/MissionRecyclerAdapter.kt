@@ -1,15 +1,16 @@
-package eu.ezann.warcompanion.gameConfig.mission
+package eu.ezann.warcompanion.gameConfig.primarymission
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.RecyclerView
 import eu.ezann.warcompanion.R
 import kotlinx.android.synthetic.main.mission_row.view.*
 import java.lang.IllegalArgumentException
 
-class MissionRecyclerAdapter(val context: Context, val listMission:List<Mission>)
+class MissionRecyclerAdapter(val context: Context, private val listMission: List<Mission>)
     :RecyclerView.Adapter<BaseViewHolder<*>>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder<*> {
@@ -30,9 +31,9 @@ class MissionRecyclerAdapter(val context: Context, val listMission:List<Mission>
 
     inner class MissionViewHolder(itemView: View):BaseViewHolder<Mission>(itemView){
         override fun bind(item: Mission, position: Int) {
-            itemView.mission_title.text = item.title
-            itemView.mission_size.text = item.size
-            itemView.mission_type.text = item.type
+            itemView.mission_title.setText(item.title)
+            itemView.mission_size.setText(R.string.size3_tag)
+            itemView.mission_type.setText(R.string.eternal_war_tag)
             itemView.mission_minimap.setImageResource(item.map)
         }
 

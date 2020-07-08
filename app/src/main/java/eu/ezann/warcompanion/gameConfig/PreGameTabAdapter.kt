@@ -3,7 +3,7 @@ package eu.ezann.warcompanion.gameConfig
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import eu.ezann.warcompanion.gameConfig.mission.PrimariesFragment
+import eu.ezann.warcompanion.gameConfig.primarymission.MissionFragment
 
 class PreGameTabAdapter (fragment: Fragment): FragmentStateAdapter(fragment) {
 
@@ -16,7 +16,7 @@ class PreGameTabAdapter (fragment: Fragment): FragmentStateAdapter(fragment) {
     override fun createFragment(position: Int): Fragment {
         val fragmentArmies = ArmiesFragment()
         val fragmentPrimaries =
-            PrimariesFragment()
+            MissionFragment()
         val fragmentSecondaries = SecondariesFragment()
 
 

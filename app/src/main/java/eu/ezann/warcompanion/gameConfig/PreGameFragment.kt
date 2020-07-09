@@ -7,10 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.viewpager2.widget.ViewPager2
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.MobileAds
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import eu.ezann.warcompanion.R
 import eu.ezann.warcompanion.databinding.FragmentPreGameBinding
+import kotlinx.android.synthetic.main.fragment_pre_game.*
 
 
 class PreGameFragment : Fragment() {
@@ -26,19 +29,11 @@ class PreGameFragment : Fragment() {
         val binding = DataBindingUtil.inflate<FragmentPreGameBinding>(inflater,
         R.layout.fragment_pre_game, container, false)
 
-        val viewModel = PreGameViewModel()
-
-
-
-
 
         return binding.root
 
 
     }
-
-
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val tabLayout = view.findViewById<TabLayout>(R.id.game_config_tab)
@@ -46,8 +41,9 @@ class PreGameFragment : Fragment() {
         viewPager = view.findViewById(R.id.pager_pre_game)
         viewPager.adapter = tabAdapter
 
-
-
+        MobileAds.initialize(requireContext()) {}
+        val adRequest = AdRequest.Builder().build()
+        adView.loadAd(adRequest)
 
         TabLayoutMediator(tabLayout,viewPager) {tab, position ->
             tab.text = when(position){

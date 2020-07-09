@@ -31,4 +31,7 @@ class PrimaryMissions {
         Mission(142, R.string.eternal_war_s4_2, R.drawable.map_incisive),
         Mission(143, R.string.eternal_war_s4_3, R.drawable.map_incisive)
     )
+    val listSize = listOf(
+        R.string.size1_tag, R.string.size2_tag, R.string.size3_tag, R.string.size4_tag
+    )
 }

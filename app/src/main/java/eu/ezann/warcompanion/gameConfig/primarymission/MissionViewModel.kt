@@ -10,11 +10,16 @@ class MissionViewModel(private val missions:PrimaryMissions):ViewModel() {
     val listMission:LiveData<List<Mission>>
             get() = missionsData
 
-    val missionlist = missions.listPrimaryStrike
 
+    fun setMission(position: Int){
 
+        missionsData.value = when(position){
+            0-> missions.listPrimaryStrike
+            1-> missions.listPrimaryPatrol
+            2-> missions.listPrimaryIncursion
+            else -> missions.listPrimaryOnslaught
 
-    fun setMission(){
-        missionsData.value = missions.listPrimaryIncursion
+        }
+
     }
 }

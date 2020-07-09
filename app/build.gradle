@@ -73,4 +73,7 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutine_version"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutine_version"
 
+    //admob
+    implementation 'com.google.android.gms:play-services-ads:19.2.0'
+
 }

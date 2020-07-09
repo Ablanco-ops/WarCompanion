@@ -14,4 +14,11 @@
     <string name="size2_tag">Fuerza de Combate</string>
 
     <string name="armies_faction_textfaction">Facción</string>
+
+    <string-array name="mission_selector">
+        <item>Fuerza de Combate</item>
+        <item>Patrulla</item>
+        <item>Incursión</item>
+        <item>Onslaught</item>
+    </string-array>
 </resources>

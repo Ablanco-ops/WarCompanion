@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
     app:startDestination="@id/titleFragment">
     <fragment
         android:id="@+id/titleFragment"
@@ -14,5 +16,14 @@
     <fragment
         android:id="@+id/preGameFragment"
         android:name="eu.ezann.warcompanion.gameConfig.PreGameFragment"
-        android:label="PreGameFragment" />
+        android:label="PreGameFragment" >
+        <action
+            android:id="@+id/action_preGameFragment_to_secSelectionFragment"
+            app:destination="@id/secSelectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secSelectionFragment"
+        android:name="eu.ezann.warcompanion.gameConfig.secondaries.SecSelectionFragment"
+        android:label="fragment_sec_selection"
+        tools:layout="@layout/fragment_sec_selection" />
 </navigation>

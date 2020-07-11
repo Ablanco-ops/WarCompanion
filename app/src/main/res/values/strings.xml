@@ -18,11 +18,11 @@
     <string name="size3_tag">Strike Force</string>
     <string name="size4_tag">Onslaught</string>
 
+    <!--Primary Missions-->
 
     <string name="eternal_war_s1_1">Incisive Attack</string>
     <string name="eternal_war_s1_2">Outriders</string>
     <string name="eternal_war_s1_3">Encircle</string>
-
 
     <string name="eternal_war_s2_1">Divide and Conquer</string>
     <string name="eternal_war_s2_2">Crossfire</string>
@@ -38,10 +38,56 @@
     <string name="eternal_war_s3_5">Scorched Earth</string>
     <string name="eternal_war_s3_6">Vital Intelligence</string>
 
-
     <string name="eternal_war_s4_1">Lines of Battle</string>
     <string name="eternal_war_s4_2">All-out War</string>
     <string name="eternal_war_s4_3">Pathway to Glory</string>
+
+
+    <!--    Secondary Missions-->
+
+    <string name="secondary_purge_1">Assassinate</string>
+    <string name="secondary_purge_2">Bring it Down</string>
+    <string name="secondary_purge_3">Titan Slayers</string>
+    <string name="secondary_purge_4">Slay the Warlord</string>
+
+    <string name="secondary_mercy_1">Thin Their Ranks</string>
+    <string name="secondary_mercy_2">Attrition</string>
+    <string name="secondary_mercy_3">While we Stand, We Fight</string>
+    <string name="secondary_mercy_4">Firs Strike</string>
+
+    <string name="secondary_supremacy_1">Engage on All Fronts</string>
+    <string name="secondary_supremacy_2">Linebreaker</string>
+    <string name="secondary_supremacy_3">Domination</string>
+
+    <string name="secondary_operations_1">Investigate Sites</string>
+    <string name="secondary_operations_2">Repair Teleport Homer</string>
+    <string name="secondary_operations_3">Raise the Banners High</string>
+
+    <string name="secondary_warpcraft_1">Mental Interrogation</string>
+    <string name="secondary_warpcraft_2">Psychic Ritual</string>
+    <string name="secondary_warpcraft_3">Abhor the Witch</string>
+
+    <string name="secondary_missions1_1">Surgical Attack</string>
+    <string name="secondary_missions1_2">Survey</string>
+    <string name="secondary_missions1_3">Encircle</string>
+
+    <string name="secondary_missions2_1">Lines of Demarcation</string>
+    <string name="secondary_missions2_2">Outflank</string>
+    <string name="secondary_missions2_3">Centre Ground</string>
+    <string name="secondary_missions2_4">Forward Push</string>
+    <string name="secondary_missions2_5">Ransack</string>
+    <string name="secondary_missions2_6">Test their Line</string>
+
+    <string name="secondary_missions3_1">Minimise Losses</string>
+    <string name="secondary_missions3_2">Vital Ground</string>
+    <string name="secondary_missions3_3">Siphon Power</string>
+    <string name="secondary_missions3_4">Secure No Man\'s Land</string>
+    <string name="secondary_missions3_5">Raze</string>
+    <string name="secondary_missions3_6">Vital Intelligence</string>
+
+    <string name="secondary_missions4_1">Hold the Centre</string>
+    <string name="secondary_missions4_2">Surround Them</string>
+    <string name="secondary_missions4_3">Search for the Portal</string>
 
 
     <string-array name="mission_selector">
@@ -52,14 +98,16 @@
     </string-array>
 
 
-
-
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="armies_command_points">Command Points</string>
     <string name="armies_faction_textfaction">Faction</string>
     <string name="mission_minimap_desc">Mission Minimap</string>
     <string name="start_game">Start Battle</string>
+    <string name="secondary_1">Secondary 1</string>
+    <string name="secondary_2">Secondary 2</string>
+    <string name="secondary_3">Secondary 3</string>
+    <string name="txt_sec_choose">Choose a Secondary Mission</string>
 
 
 </resources>

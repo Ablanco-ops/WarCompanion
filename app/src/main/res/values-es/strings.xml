@@ -21,4 +21,5 @@
         <item>Incursión</item>
         <item>Onslaught</item>
     </string-array>
+    <string name="armies_command_points">Puntos de Mando</string>
 </resources>

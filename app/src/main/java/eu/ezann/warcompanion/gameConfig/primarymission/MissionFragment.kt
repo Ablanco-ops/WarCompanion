@@ -7,16 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-
 import eu.ezann.warcompanion.R
 import eu.ezann.warcompanion.databinding.FragmentMissionBinding
-
 import kotlinx.android.synthetic.main.fragment_mission.*
 
 class MissionFragment : Fragment() {
@@ -69,7 +65,7 @@ class MissionFragment : Fragment() {
                 parent: AdapterView<*>?, view: View?, position: Int, id: Long
             ) {
                 viewModel.setMission(position)
-                Toast.makeText(requireContext(),position.toString() + viewModel.listMission.toString(),Toast.LENGTH_LONG).show()
+
             }
 
         }

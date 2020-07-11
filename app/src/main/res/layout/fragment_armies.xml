@@ -13,7 +13,7 @@
             android:id="@+id/player_name"
             android:layout_width="0dp"
             android:layout_height="48dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:text="@string/your_name"
             android:textAlignment="center"
             android:textAppearance="?textAppearanceHeadline6"
@@ -24,18 +24,15 @@
             app:layout_constraintTop_toTopOf="parent" />
 
 
-        <EditText
+        <TextView
             android:id="@+id/opp_name"
             android:layout_width="0dp"
             android:layout_height="48dp"
-            android:autofillHints="@string/opponent_hint"
-            android:ems="10"
-            android:hint="@string/opponent_hint"
-            android:inputType="textPersonName"
             android:text="@string/opponent_text"
             android:textAlignment="center"
             android:textAppearance="?textAppearanceHeadline6"
             android:textColor="@color/colorWhite"
+            android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/player_name"
             app:layout_constraintTop_toTopOf="parent" />

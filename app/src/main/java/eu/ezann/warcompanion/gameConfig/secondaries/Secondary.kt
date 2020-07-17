@@ -74,6 +74,7 @@ class SecondaryMissions {
         Secondary(51, R.string.secondary_warpcraft_1,5,0),
         Secondary(52, R.string.secondary_warpcraft_2,5,1),
         Secondary(53, R.string.secondary_warpcraft_3,5,1),
+
         Secondary(611, R.string.secondary_missions1_1,6,0),
         Secondary(612, R.string.secondary_missions1_2,6,0),
         Secondary(613, R.string.secondary_missions1_3,6,0),

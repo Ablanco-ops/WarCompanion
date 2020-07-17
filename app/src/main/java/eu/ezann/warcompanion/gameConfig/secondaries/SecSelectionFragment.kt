@@ -29,18 +29,22 @@ class SecSelectionFragment : Fragment() {
     ): View? {
 
 
-        // Inflate the layout for this fragment
+
+
+
         return inflater.inflate(R.layout.fragment_sec_selection, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         setupSecSelectorRecycler()
 
 
-        viewModel.listSecondaries.observe(viewLifecycleOwner, Observer {
-            sec_selection_recycler.adapter = SecSelectionAdapter(requireContext(),it)
-        })
+
+//        viewModel.listSecondaries.observe(viewLifecycleOwner, Observer {
+//            sec_selection_recycler.adapter = SecSelectionAdapter(requireContext(),it)
+//        })
 
 
 
@@ -48,7 +52,7 @@ class SecSelectionFragment : Fragment() {
     }
     private fun setupSecSelectorRecycler() {
         sec_selection_recycler.layoutManager = GridLayoutManager(requireContext(),2)
-        viewModel.getP1Secondaries()
+
         sec_selection_recycler.adapter = SecSelectionAdapter(requireContext(),viewModel.secondaryList)
     }
 }

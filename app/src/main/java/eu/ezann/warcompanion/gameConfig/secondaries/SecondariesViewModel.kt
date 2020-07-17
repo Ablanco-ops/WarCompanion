@@ -11,7 +11,7 @@ class SecondariesViewModel(private val missions: SecondaryMissions ): ViewModel(
     val listSecondaries: LiveData<MutableList<Secondary>>
             get() = secondariesData
 
-    val secondaryList = mutableListOf<Secondary>()
+    val secondaryList = missions.allSecondaries
 
 
 

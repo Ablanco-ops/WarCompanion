@@ -13,10 +13,23 @@
     <string name="pre_game_tab_secondaries">Secondaries</string>
 
     <string name="eternal_war_tag">Eternal War</string>
+    <string name="gt_2020">GT 2020</string>
     <string name="size1_tag">Patrol</string>
     <string name="size2_tag">Incursion</string>
     <string name="size3_tag">Strike Force</string>
     <string name="size4_tag">Onslaught</string>
+
+<!--    Secondaries Categories-->
+    <string name="sec_category_1">Purge the Enemy</string>
+    <string name="sec_category_2">No Mercy, No Respite</string>
+    <string name="sec_category_3">Battlefield Supremacy</string>
+    <string name="sec_category_4">Shadow Operations</string>
+    <string name="sec_category_5">Warpcraft</string>
+    <string name="sec_category_6">Mission</string>
+
+    <string name="sec_type_0">Progressive</string>
+    <string name="sec_type_1">End Game</string>
+    <string name="sec_type_2">Progressive and End</string>
 
     <!--Primary Missions-->
 
@@ -95,6 +108,14 @@
         <item>Combat Patrol</item>
         <item>Incursion</item>
         <item>Onslaught</item>
+    </string-array>
+
+    <string-array name="secondaries_selector">
+        <item>Purge the Enemy</item>
+        <item>No Mercy, No Respite</item>
+        <item>Battlefield Supremacy</item>
+        <item>Shadow Operations</item>
+        <item>Warpcraft</item>
     </string-array>
 
 

@@ -1,49 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".gameConfig.secondaries.SecSelectionFragment">
+    xmlns:tools="http://schemas.android.com/tools">
 
-   <androidx.constraintlayout.widget.ConstraintLayout
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content">
+    <data>
 
-       <ImageButton
-           android:id="@+id/btn_close"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:src="@drawable/ic_baseline_close_24"
-           app:layout_constraintStart_toStartOf="parent"
-           app:layout_constraintTop_toTopOf="parent">
+    </data>
 
-       </ImageButton>
-       <TextView
-           android:layout_width="0dp"
-           android:layout_height="wrap_content"
-           app:layout_constraintStart_toEndOf="@+id/btn_close"
-           app:layout_constraintEnd_toEndOf="parent"
-           app:layout_constraintTop_toTopOf="parent"
-           android:text="@string/txt_sec_choose"
-           android:layout_marginTop="8dp"
-           android:textAlignment="center"
-           android:textSize="18sp">
-       </TextView>
-
-   </androidx.constraintlayout.widget.ConstraintLayout>
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp">
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/sec_selection_recycler"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".gameConfig.secondaries.SecSelectionFragment">
 
-    </androidx.recyclerview.widget.RecyclerView>
-    </ScrollView>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/btn_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_close_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </ImageButton>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/btn_close"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="@string/txt_sec_choose"
+                android:layout_marginTop="8dp"
+                android:textAlignment="center"
+                android:textSize="18sp">
+
+            </TextView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Spinner
+            android:id="@+id/secondary_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </Spinner>
 
 
-</LinearLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/sec_selection_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </ScrollView>
+
+
+    </LinearLayout>
+</layout>

@@ -2,7 +2,7 @@ package eu.ezann.warcompanion.gameConfig.secondaries
 
 import eu.ezann.warcompanion.R
 
-data class Secondary(val secondId:Int, val title: Int, val category: Int, val type: Int) {
+data class Secondary(val id:Int, val title: Int, val category: Int, val type: Int) {
 
 }
 class SecondaryMissions {
@@ -34,27 +34,27 @@ class SecondaryMissions {
         Secondary(53, R.string.secondary_warpcraft_3,5,1)
     )
     val missionSec = listOf(
-        Secondary(611, R.string.secondary_missions1_1,6,0),
-        Secondary(612, R.string.secondary_missions1_2,6,0),
-        Secondary(613, R.string.secondary_missions1_3,6,0),
+        Secondary(111, R.string.secondary_missions1_1,6,0),
+        Secondary(112, R.string.secondary_missions1_2,6,0),
+        Secondary(113, R.string.secondary_missions1_3,6,0),
 
-        Secondary(621, R.string.secondary_missions2_1,6,0),
-        Secondary(622, R.string.secondary_missions2_2,6,0),
-        Secondary(623, R.string.secondary_missions2_3,6,0),
-        Secondary(624, R.string.secondary_missions2_4,6,0),
-        Secondary(625, R.string.secondary_missions2_5,6,0),
-        Secondary(626, R.string.secondary_missions2_6,6,0),
+        Secondary(121, R.string.secondary_missions2_1,6,0),
+        Secondary(122, R.string.secondary_missions2_2,6,0),
+        Secondary(123, R.string.secondary_missions2_3,6,0),
+        Secondary(124, R.string.secondary_missions2_4,6,0),
+        Secondary(125, R.string.secondary_missions2_5,6,0),
+        Secondary(126, R.string.secondary_missions2_6,6,0),
 
-        Secondary(631, R.string.secondary_missions3_1,6,1),
-        Secondary(632, R.string.secondary_missions3_2,6,0),
-        Secondary(633, R.string.secondary_missions3_3,6,0),
-        Secondary(634, R.string.secondary_missions3_4,6,0),
-        Secondary(635, R.string.secondary_missions3_5,6,1),
-        Secondary(636, R.string.secondary_missions3_6,6,0),
+        Secondary(131, R.string.secondary_missions3_1,6,1),
+        Secondary(132, R.string.secondary_missions3_2,6,0),
+        Secondary(133, R.string.secondary_missions3_3,6,0),
+        Secondary(134, R.string.secondary_missions3_4,6,0),
+        Secondary(135, R.string.secondary_missions3_5,6,1),
+        Secondary(136, R.string.secondary_missions3_6,6,0),
 
-        Secondary(641, R.string.secondary_missions4_1,6,0),
-        Secondary(642, R.string.secondary_missions4_2,6,2),
-        Secondary(643, R.string.secondary_missions4_3,6,0)
+        Secondary(141, R.string.secondary_missions4_1,6,0),
+        Secondary(142, R.string.secondary_missions4_2,6,2),
+        Secondary(143, R.string.secondary_missions4_3,6,0)
     )
     val allSecondaries = listOf<Secondary>(
         Secondary(11, R.string.secondary_purge_1,1, 1),
@@ -75,26 +75,26 @@ class SecondaryMissions {
         Secondary(52, R.string.secondary_warpcraft_2,5,1),
         Secondary(53, R.string.secondary_warpcraft_3,5,1),
 
-        Secondary(611, R.string.secondary_missions1_1,6,0),
-        Secondary(612, R.string.secondary_missions1_2,6,0),
-        Secondary(613, R.string.secondary_missions1_3,6,0),
+        Secondary(111, R.string.secondary_missions1_1,6,0),
+        Secondary(112, R.string.secondary_missions1_2,6,0),
+        Secondary(113, R.string.secondary_missions1_3,6,0),
 
-        Secondary(621, R.string.secondary_missions2_1,6,0),
-        Secondary(622, R.string.secondary_missions2_2,6,0),
-        Secondary(623, R.string.secondary_missions2_3,6,0),
-        Secondary(624, R.string.secondary_missions2_4,6,0),
-        Secondary(625, R.string.secondary_missions2_5,6,0),
-        Secondary(626, R.string.secondary_missions2_6,6,0),
+        Secondary(121, R.string.secondary_missions2_1,6,0),
+        Secondary(122, R.string.secondary_missions2_2,6,0),
+        Secondary(123, R.string.secondary_missions2_3,6,0),
+        Secondary(124, R.string.secondary_missions2_4,6,0),
+        Secondary(125, R.string.secondary_missions2_5,6,0),
+        Secondary(126, R.string.secondary_missions2_6,6,0),
 
-        Secondary(631, R.string.secondary_missions3_1,6,1),
-        Secondary(632, R.string.secondary_missions3_2,6,0),
-        Secondary(633, R.string.secondary_missions3_3,6,0),
-        Secondary(634, R.string.secondary_missions3_4,6,0),
-        Secondary(635, R.string.secondary_missions3_5,6,1),
-        Secondary(636, R.string.secondary_missions3_6,6,0),
+        Secondary(131, R.string.secondary_missions3_1,6,1),
+        Secondary(132, R.string.secondary_missions3_2,6,0),
+        Secondary(133, R.string.secondary_missions3_3,6,0),
+        Secondary(134, R.string.secondary_missions3_4,6,0),
+        Secondary(135, R.string.secondary_missions3_5,6,1),
+        Secondary(136, R.string.secondary_missions3_6,6,0),
 
-        Secondary(641, R.string.secondary_missions4_1,6,0),
-        Secondary(642, R.string.secondary_missions4_2,6,2),
-        Secondary(643, R.string.secondary_missions4_3,6,0)
+        Secondary(141, R.string.secondary_missions4_1,6,0),
+        Secondary(142, R.string.secondary_missions4_2,6,2),
+        Secondary(143, R.string.secondary_missions4_3,6,0)
     )
 }

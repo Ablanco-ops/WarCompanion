@@ -3,8 +3,11 @@ package eu.ezann.warcompanion.gameConfig.secondaries
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 
-class SecondariesViewModelFactory(private val missions: SecondaryMissions):ViewModelProvider.Factory {
+class SecondariesViewModelFactory(private val secMissions: SecondaryMissions):ViewModelProvider.Factory {
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-        return modelClass.getConstructor(missions::class.java).newInstance(missions)
+        if (modelClass.isAssignableFrom(SecondariesViewModel::class.java)){
+            return SecondariesViewModel(secMissions) as T
+        }
+        throw IllegalArgumentException("Unknown ViewModel class")
     }
 }

@@ -5,23 +5,26 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 
-class SecondariesViewModel(private val missions: SecondaryMissions ): ViewModel() {
+class SecondariesViewModel(private val secondaryMissions: SecondaryMissions): ViewModel() {
 
-    private val secondariesData = MutableLiveData<MutableList<Secondary>>()
-    val listSecondaries: LiveData<MutableList<Secondary>>
+    private val secondariesData = MutableLiveData<List<Secondary>>()
+    val listSecondaries: LiveData<List<Secondary>>
             get() = secondariesData
 
-    val secondaryList = missions.allSecondaries
+    val secondaryList = secondaryMissions.allSecondaries
 
 
 
 
-    fun getP1Secondaries(){
+    fun setSecondaries(category: Int){
+        when (category){
+            0->secondariesData.value = secondaryMissions.purge
+            1->secondariesData.value = secondaryMissions.mercy
+            2->secondariesData.value = secondaryMissions.supremacy
+            3->secondariesData.value = secondaryMissions.operations
+            else->secondariesData.value = secondaryMissions.warpcraft
 
-
-        secondariesData.value?.addAll(missions.allSecondaries)
-
-
+        }
 
     }
 }

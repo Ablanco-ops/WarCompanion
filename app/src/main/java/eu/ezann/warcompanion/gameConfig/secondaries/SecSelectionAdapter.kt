@@ -23,7 +23,7 @@ class SecSelectionAdapter: ListAdapter<Secondary, SecSelectionAdapter.ItemViewHo
     class DiffCallback : DiffUtil.ItemCallback<Secondary>() {
 
         override fun areItemsTheSame(oldItem: Secondary, newItem: Secondary): Boolean {
-            return oldItem?.secondId == newItem?.secondId
+            return oldItem?.id == newItem?.id
         }
 
         override fun areContentsTheSame(oldItem: Secondary, newItem: Secondary): Boolean {
@@ -31,11 +31,23 @@ class SecSelectionAdapter: ListAdapter<Secondary, SecSelectionAdapter.ItemViewHo
         }
     }
 
-    class ItemViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class ItemViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(item: Secondary) = with(itemView) {
-            itemView.secondaries_cd_title.setText(item.title)
-            itemView.secondaries_cd_category.setText(item.category)
-            itemView.secondaries_cd_type.setText(item.type)
+            secondaries_cd_title.setText(item.title)
+            when (item.category){
+                1->secondaries_cd_category.setText(R.string.sec_category_1)
+                2->secondaries_cd_category.setText(R.string.sec_category_2)
+                3->secondaries_cd_category.setText(R.string.sec_category_3)
+                4->secondaries_cd_category.setText(R.string.sec_category_4)
+                5->secondaries_cd_category.setText(R.string.sec_category_5)
+                else->secondaries_cd_category.setText(R.string.sec_category_6)
+            }
+            when(item.type){
+                0->secondaries_cd_type.setText(R.string.sec_type_0)
+                1->secondaries_cd_type.setText(R.string.sec_type_1)
+                else->secondaries_cd_type.setText(R.string.sec_type_2)
+            }
+
 
             setOnClickListener {
                 // TODO: Handle on click

@@ -8,67 +8,647 @@
         android:layout_height="match_parent"
         android:background="@color/colorBackground"
         tools:context=".gameConfig.PreGameFragment">
-        <androidx.constraintlayout.widget.ConstraintLayout
+
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="@+id/start_game"
+            app:layout_constraintBottom_toTopOf="@+id/start_game_btn"
             app:layout_constraintTop_toTopOf="parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/armies_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/faction_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="@string/factions_txt"
+                    android:textAlignment="center"
+
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/ply_faction_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="@string/you_txt"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/faction_text">
+
+                </TextView>
+
+                <Spinner
+                    android:id="@+id/ply_faction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBaseline_toBaselineOf="@id/ply_faction_txt"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/opp_faction_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="@string/opponent_txt"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ply_faction_txt">
+
+                </TextView>
+
+                <Spinner
+                    android:id="@+id/opp_faction"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+
+                    android:gravity="center"
+                    app:layout_constraintBaseline_toBaselineOf="@id/opp_faction_txt"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <View
+                    android:id="@+id/div_army_faction"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="8dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/opp_faction" />
+
+                <TextView
+                    android:id="@+id/armies_cp_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="@string/armies_command_points"
+                    android:textAlignment="center"
+                    android:textAppearance="?textAppearanceHeadline6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/div_army_faction">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/ply_cp_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="@string/you_txt"
+                    android:textAppearance="?textAppearanceHeadline6"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/armies_cp_text">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/opp_cp_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="@string/opponent_text"
+                    android:textAppearance="?textAppearanceHeadline6"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ply_cp_txt">
+
+                </TextView>
 
 
+                <TextView
+                    android:id="@+id/p1_cp"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:background="@color/colorWhite"
+                    android:text="12"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    app:layout_constraintBaseline_toBaselineOf="@id/ply_cp_txt"
+                    app:layout_constraintEnd_toStartOf="@id/p1_cp_plus">
+
+                </TextView>
+
+                <ImageButton
+                    android:id="@+id/p1_cp_plus"
+                    style="@style/plus_minus_buttons"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/ic_baseline_arrow_right_24"
+                    app:layout_constraintBottom_toBottomOf="@id/p1_cp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/p1_cp">
+
+                </ImageButton>
+
+                <ImageButton
+                    android:id="@+id/p1_cp_minus"
+                    style="@style/plus_minus_buttons"
+                    android:src="@drawable/ic_baseline_arrow_left_24"
+                    app:layout_constraintBottom_toBottomOf="@id/p1_cp"
+                    app:layout_constraintEnd_toStartOf="@id/p1_cp"
+                    app:layout_constraintTop_toTopOf="@id/p1_cp">
+
+                </ImageButton>
+
+                <TextView
+                    android:id="@+id/p2_cp"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:background="@color/colorWhite"
+                    android:text="12"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    app:layout_constraintBaseline_toBaselineOf="@id/opp_cp_txt"
+                    app:layout_constraintEnd_toStartOf="@id/p2_cp_plus">
+
+                </TextView>
+
+                <ImageButton
+                    android:id="@+id/p2_cp_plus"
+                    style="@style/plus_minus_buttons"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/ic_baseline_arrow_right_24"
+                    app:layout_constraintBottom_toBottomOf="@id/p2_cp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/p2_cp">
+
+                </ImageButton>
+
+                <ImageButton
+                    android:id="@+id/p2_cp_minus"
+                    style="@style/plus_minus_buttons"
+                    android:src="@drawable/ic_baseline_arrow_left_24"
+                    app:layout_constraintBottom_toBottomOf="@id/p2_cp"
+                    app:layout_constraintEnd_toStartOf="@id/p2_cp"
+                    app:layout_constraintTop_toTopOf="@id/p2_cp">
+
+                </ImageButton>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
 
+                <View
+                    android:id="@+id/divider_mission"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="8dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:background="?android:attr/listDivider" />
 
-                <com.google.android.material.tabs.TabLayout
-                    android:id="@+id/game_config_tab"
+                <TextView
+                    android:id="@+id/mission_txt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:text="@string/mission_txt"
+                    android:layout_marginVertical="8dp"
+                    android:textAlignment="center"
+                    android:textAppearance="?textAppearanceHeadline6"
+                    app:layout_constraintTop_toBottomOf="@id/divider_mission">
 
-                <androidx.viewpager2.widget.ViewPager2
-                    android:id="@+id/pager_pre_game"
+                </TextView>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/select_mission_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/mission_txt"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="@string/select_mission_btn_txt">
+
+                </com.google.android.material.button.MaterialButton>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/game_config_tab" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/colorWhite"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@id/select_mission_btn"
+                    android:padding="4dp">
 
+
+                    <ImageView
+                        android:id="@+id/mission_minimap"
+                        android:layout_width="120dp"
+                        android:layout_height="88dp"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/mission_minimap_desc"
+                        android:scaleType="fitCenter"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:srcCompat="@tools:sample/avatars" />
+
+                    <CheckBox
+                        android:id="@+id/mission_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/mission_type"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/mission_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/mission_check"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/mission_minimap"
+                        app:layout_constraintTop_toBottomOf="@+id/mission_type"
+
+
+                        tools:text="Size" />
+
+                    <TextView
+                        android:id="@+id/mission_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toTopOf="@+id/mission_size"
+                        app:layout_constraintEnd_toStartOf="@id/mission_check"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/mission_minimap"
+                        app:layout_constraintTop_toBottomOf="@+id/mission_title"
+                        tools:text="Type" />
+
+                    <TextView
+                        android:id="@+id/mission_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:textSize="18sp"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/mission_minimap"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="Title" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                    <TextView
+                        android:id="@+id/secondary_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?textAppearanceHeadline6"
+                        android:textAlignment="center"
+                        android:layout_marginVertical="8dp"
+                        android:text="@string/secondary_objectives_txt"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </TextView>
+                    <TextView
+                        android:id="@+id/p1_sec_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/you_txt"
+                        android:layout_marginTop="8dp"
+                        android:textAppearance="?textAppearanceHeadline6"
+                        app:layout_constraintTop_toBottomOf="@id/secondary_txt"
+                        app:layout_constraintStart_toStartOf="@id/card_p1_sec1"
+                        app:layout_constraintEnd_toEndOf="@id/card_p1_sec1">
+
+                    </TextView>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_p1_sec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/secondaries_btn_txt"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/p1_sec_txt">
+
+                    </com.google.android.material.button.MaterialButton>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_p1_sec1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="@+id/btn_p1_sec"
+                        app:layout_constraintStart_toStartOf="@+id/btn_p1_sec"
+                        app:layout_constraintTop_toBottomOf="@id/btn_p1_sec">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txt_p1_sec1_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="Title">
+
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/txt_p1_sec1_cat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="Category">
+
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/txt_p1_sec1_type"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="Type">
+
+                            </TextView>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_p1_sec2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="8dp"
+                        app:layout_constraintEnd_toEndOf="@+id/card_p1_sec1"
+                        app:layout_constraintStart_toStartOf="@+id/card_p1_sec1"
+                        app:layout_constraintTop_toBottomOf="@id/card_p1_sec1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txt_p1_sec2_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="Title">
+
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/txt_p1_sec2_cat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="Category">
+
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/txt_p1_sec2_type"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="Type">
+
+                            </TextView>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_p1_sec3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="8dp"
+                        app:layout_constraintEnd_toEndOf="@+id/card_p1_sec2"
+                        app:layout_constraintStart_toStartOf="@+id/card_p1_sec2"
+                        app:layout_constraintTop_toBottomOf="@id/card_p1_sec2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txt_p1_sec3_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="Title">
+
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/txt_p1_sec3_cat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="Category">
+
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/txt_p1_sec3_type"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="Type">
+
+                            </TextView>
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <View
+                        android:id="@+id/divider2"
+                        android:layout_width="1dp"
+                        android:layout_height="0dp"
+                        android:paddingVertical="8dp"
+                        android:background="?android:attr/listDivider"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/card_p2_sec1"
+                        app:layout_constraintStart_toEndOf="@+id/card_p1_sec1"
+                        app:layout_constraintTop_toBottomOf="@id/secondary_txt" />
+
+                    <TextView
+                        android:id="@+id/p2_sec_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/opponent_text"
+                        android:layout_marginTop="8dp"
+                        android:textAppearance="?textAppearanceHeadline6"
+                        app:layout_constraintTop_toBottomOf="@id/secondary_txt"
+                        app:layout_constraintStart_toStartOf="@id/card_p2_sec1"
+                        app:layout_constraintEnd_toEndOf="@id/card_p2_sec1">
+
+                    </TextView>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_p2_sec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/secondaries_btn_txt"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/p2_sec_txt">
+
+                    </com.google.android.material.button.MaterialButton>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_p2_sec1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="@+id/btn_p2_sec"
+                        app:layout_constraintStart_toStartOf="@+id/btn_p2_sec"
+                        app:layout_constraintTop_toBottomOf="@id/btn_p2_sec">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txt_p2_sec1_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="Title">
+
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/txt_p2_sec1_cat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="Category">
+
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/txt_p2_sec1_type"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="Type">
+
+                            </TextView>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_p2_sec2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="8dp"
+                        app:layout_constraintEnd_toEndOf="@+id/card_p2_sec1"
+                        app:layout_constraintStart_toStartOf="@+id/card_p2_sec1"
+                        app:layout_constraintTop_toBottomOf="@id/card_p2_sec1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txt_p2_sec2_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="Title">
+
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/txt_p2_sec2_cat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="Category">
+
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/txt_p2_sec2_type"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="Type">
+
+                            </TextView>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_p2_sec3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="8dp"
+                        app:layout_constraintEnd_toEndOf="@+id/card_p2_sec2"
+                        app:layout_constraintStart_toStartOf="@+id/card_p2_sec2"
+                        app:layout_constraintTop_toBottomOf="@id/card_p2_sec2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txt_p2_sec3_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="Title">
+
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/txt_p2_sec3_cat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="Category">
+
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/txt_p2_sec3_type"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="Type">
+
+                            </TextView>
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/start_game"
+            android:id="@+id/start_game_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/start_game"
             android:layout_margin="8dp"
-            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/start_game"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent">
+            app:layout_constraintStart_toStartOf="parent">
 
         </com.google.android.material.button.MaterialButton>
-
-<!--        <com.google.android.gms.ads.AdView-->
-<!--            android:id="@+id/adView"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_alignParentBottom="true"-->
-<!--            android:layout_centerHorizontal="true"-->
-<!--            app:adSize="BANNER"-->
-<!--            app:adUnitId="ca-app-pub-3940256099942544/6300978111"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent">-->
-
-<!--        </com.google.android.gms.ads.AdView>-->
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

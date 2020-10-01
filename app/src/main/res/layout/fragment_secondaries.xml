@@ -13,7 +13,7 @@
         tools:context=".gameConfig.secondaries.SecondariesFragment">
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_p1_sec1"
+            android:id="@+id/btn_p1_sec"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -28,9 +28,9 @@
             android:id="@+id/card_p1_sec1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="@+id/btn_p1_sec1"
-            app:layout_constraintStart_toStartOf="@+id/btn_p1_sec1"
-            app:layout_constraintTop_toBottomOf="@id/btn_p1_sec1">
+            app:layout_constraintEnd_toEndOf="@+id/btn_p1_sec"
+            app:layout_constraintStart_toStartOf="@+id/btn_p1_sec"
+            app:layout_constraintTop_toBottomOf="@id/btn_p1_sec">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -177,7 +177,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_p2_sec1"
+            android:id="@+id/btn_p2_sec"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -192,9 +192,9 @@
             android:id="@+id/card_p2_sec1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="@+id/btn_p2_sec1"
-            app:layout_constraintStart_toStartOf="@+id/btn_p2_sec1"
-            app:layout_constraintTop_toBottomOf="@id/btn_p2_sec1">
+            app:layout_constraintEnd_toEndOf="@+id/btn_p2_sec"
+            app:layout_constraintStart_toStartOf="@+id/btn_p2_sec"
+            app:layout_constraintTop_toBottomOf="@id/btn_p2_sec">
 
             <LinearLayout
                 android:layout_width="match_parent"

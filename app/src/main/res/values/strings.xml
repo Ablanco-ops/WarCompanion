@@ -129,6 +129,15 @@
     <string name="secondary_2">Secondary 2</string>
     <string name="secondary_3">Secondary 3</string>
     <string name="txt_sec_choose">Choose a Secondary Mission</string>
+    <string name="faction_and_cps">Faction and CPs</string>
+    <string name="p1_faction">Your Faction</string>
+    <string name="factions_txt">Factions</string>
+    <string name="you_txt">You</string>
+    <string name="opponent_txt">Opponent</string>
+    <string name="select_mission_btn_txt">Select Mission</string>
+    <string name="mission_txt">Mission</string>
+    <string name="secondary_objectives_txt">Secondary Objectives</string>
+    <string name="secondaries_btn_txt">Secondaries</string>
 
 
 </resources>
